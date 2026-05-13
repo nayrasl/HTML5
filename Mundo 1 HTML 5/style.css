@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+ body{
+            background-color: rgb(246, 215, 220);
+        }
+       h1 { 
+        color: rgb(220, 10, 45);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        text-align: center; 
+    }
+        h2 {
+            color: rgb(243, 14, 52);
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+        h3 {
+            color: rgb(236, 19, 55);
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        p{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15;
+            color: rgb(242, 32, 67);
+            background-color: beige;
+            text-align: justify;}

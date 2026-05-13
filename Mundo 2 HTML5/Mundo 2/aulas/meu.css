@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*importando fonte Playwrite BR */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BR:wght@100..400&family=Playwrite+DE+SAS:wght@100..400&display=swap');
+/*importando fonte Farsan */
+@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Playwrite+BR:wght@100..400&family=Playwrite+DE+SAS:wght@100..400&display=swap');
+/*importando fonte baixada (greating) */
+@font-face {
+    font-family: greating;
+    src: url("fontes/Greating\ otf.otf")format("opentype");
+    src: url("fontes/Greating\ ttf.ttf")format("truetype");
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: farsan;
+    font-size: 1.2em;
+    margin: 10px 50px 10px 50px;
+   
+}
+
+h1#principal{
+    font-family: "Farsa";
+    text-align: center;
+    color: rgb(85, 64, 15);
+    background-color: rgba(237, 217, 136, 0.39);
+    padding-top: 12px;
+    
+}
+
+h1{
+    font-family: greating;
+    text-align: center;
+    color: rgb(85, 64, 15);
+    background-color: rgba(237, 217, 136, 0.39);
+
+    height: 70px;
+    width: auto;
+
+    border-width: 5px;
+    border-right: 0px;
+    border-left: 0px;
+    
+    border-style: solid;
+    border-color: brown;
+
+    padding-top: 0px;
+    padding-bottom: 15px;
+    margin: auto;
+    margin-bottom: 30px;
+    
+}
+
+h2{
+    font-family: farsan;
+    color: rgb(85, 64, 15);
+    background-color: rgba(237, 217, 136, 0.39);
+    text-align: center;
+}
+.sub{
+    font-family: "farsan";
+   color: rgb(85, 64, 15);
+   background-color: rgba(240, 248, 255, 0);
+}
+ h3{
+    font-family: "farsan";
+   color: rgb(85, 64, 15);
+ }
+div:hover {
+    background-color: rgba(235, 227, 227, 0.661);
+}
+div {
+  border: 1px solid black;
+  background-color: rgba(170, 227, 142, 0.716);
+}
+div > p {
+    display: none;
+}
+div:hover > p {
+    display: block;
+}
+div#d1 {
+    background-color: rgba(125, 125, 235, 0.869);
+}
+div#d2 {
+    background-color: rgba(232, 162, 204, 0.8);
+}
+div#d3 {
+    background-color: rgba(177, 183, 145, 0.818);
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+.especial {
+    background-color: aquamarine;
+}
+
+a:visited {
+    color: darkred;
+}
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+}

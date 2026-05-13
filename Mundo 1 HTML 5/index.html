@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <title>Estudos HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr>
+    <h1>Estudos de HTML 5 e CSS 3</h1>
+    <hr>
+    <p><strong>Conceito</strong> <br>
+        <br>
+        HTML → Linguagem responsável por estruturar páginas web
+        Define conteúdo e organização dos elementos. Como texto, imagem e vídeo.
+        <br>
+        CSS → Designer da página, como cores, sombras, tamanhos e posicionamentos.
+    </p>
+    <h2>Estrutura do html</h2>
+    <img src="imagens/download.jfif" alt="AULA">
+    <p>!DOCTYPE html → define HTML5 <br>
+    html → envolve toda a página <br>
+    head → configurações da página <br>
+    meta → metadados (ex: codificação) <br>
+    title → título da aba <br>
+    body → conteúdo visível
+</p>
+    <h3>Tags de texto</h3>
+    <p>h1 até h6 → títulos (hierarquia) <br>
+    p → parágrafo <br>
+    span → elemento genérico em linha <br>
+    strong → negrito com importância <br>
+    em → itálico com ênfase
+    <br>&(comercial)lt → representa <
+    <br>&(comercial)gt → representa >
+    <br>header → cabeçalho
+    <br>nav → menu de navegação
+    <br>main → conteúdo principal
+    <br>section → seção temática
+    <br>article → conteúdo independente
+    <br>footer → rodapé <br>
+    <br><strong> Listas</strong>
+    <br>ul → lista não ordenada
+    <br>ol → lista ordenada
+    <br>li → item da lista
+    <br><strong> Formulários</strong> <br>
+    <br>form → formulário
+    <br>input → campo de entrada
+    <br>label → rótulo
+    <br>button → botão
+    <br>Marca texto - MARK 
+    <br>Small - texto menor
+    <br>Riscado - del
+    <br>Sublinhado - ins 
+    <br>Texto a cima - sup. Ex: 20 mts<sup>2</sup>
+    <br>Texto a baixo - sub. Ex: H<sub>2</sub>o
+    <br> br → Quebra de linha
+
+<h2> Como inserir imagem no texto e ícone na aba do site
+</h2>
+<p>Com IMG insere a imagem e com GIMP consegue redimensionar e editar a imagem antes de inserir no site. Atenção as imagens devido aos direitos autorais.</p>
+<img src="https://horadecodar.com.br/wp-content/uploads/2023/04/Linguagem-HTML-768x512.jpg" alt="html">
+ <p>Dicas: para selecionar imagens no VS Code: teclas CTRL + espaço.</p>
+ <p>Para colocar ícone na aba do site, precisa de uma imagem com a extensão .ico que pode ser criada no site Favicon.io ou imagem já formatada no site Icon archive. E deve ser inserido pelo cabeçalho &lt;head &gt; no código.</p>
+
+ <!-- AULA 8 CItações e Códigos-->
+<h2>Código-fonte</h2>
+<p>Para usar o texto como formatação com a mesma fonte de um código, vamos ver um exemplo em Python. <br>
+<pre>
+    <code style="color:rgb(242, 32, 67);">
+        num = int(input("Digite um número inteiro: ")) 
+        print(f'O número digitado foi {num}'.)
+    </code>
+</pre>
+
+    <p>Isso é possível utilizando a tag &lt;code&gt; e para manter a indentação usa a tag &lt;pre&gt;. </p>
+
+</p>
+<h2>Citações</h2>
+<h3>Simples</h3>
+<p>Para citações simples na mesma linha, se utiliza &lt;q&gt;.
+<q>Esse é um exemplo de citação.</q></p>
+<h3>Completas</h3>
+<p>Para citações completas se utiliza &lt;blockquote&gt; como o exemplo a seguir de Dialética, de Vinicius de Moraes:
+    <pre><blockquote style="color:rgb(242, 32, 67);" cite = "https://www.culturagenial.com/poemas-sobre-a-vida-escritos-por-autores-famosos/#google_vignette">
+É claro que a vida é boa
+E a alegria, a única indizível emoção
+É claro que te acho linda
+Em ti bendigo o amor das coisas simples
+É claro que te amo
+E tenho tudo para ser feliz
+Mas acontece que eu sou triste...</blockquote></pre>
+<p>
+E dentro da tag colocar a URL da citação com o comando <u>cite=</u> exemplo:
+<code>&lt;blockquote style="color:rgb(242, 32, 67);" cite = "https://www.culturagenial.com/poemas-sobre-a-vida-escritos-por-autores-famosos/#google_vignette"&gt;</code>
+</p>
+<h2>Abreviações</h2>
+<p>
+    Para abreviações se utiliza a tag &lt;abbr title= Significado da abreviação&gt;
+    como por exemplo:
+    <abbr title="HyperText Markeup Language">HTML.</abbr>
+</p>
+<!--Aula 09 Listas-->>
+<h2>Trabalhando com listas</h2>
+<h3>Listas Ordenadas</h3>
+<p>Usa-se &lt;ol&gt; para uma lista ordenada e &lt;li&gt; para especificar as linhas. Como por exemplo: </p>
+<ol style="color: rgb(243, 74, 102);">
+    <li>Primeiro item</li>
+    <li>Segundo item</li>
+    <li>Terceiro item</li>
+    <li>Quarto item</li>
+    <li>Quinto item</li>
+</ol>
+<p>Tem como colocar também o tipo, letra ou númerico com a função 'type' e de qual número ou letra quer iniciar, com a função 'start'.</p>
+<h3>Listas não ordenadas</h3>
+<p>Usa-se &lt;ul&gt; e não seguem uma sequência, como por exemplo: </p>
+<ul style="color: rgb(242, 66, 96);">
+    <li>Arroz</li>
+    <li>Feijão</li>
+    <li>Abacate</li>
+    <li>Espinafre</li>
+</ul>
+<h3>Listas Mistas</h3>
+<p>Tem como usar lista ordenada dentro de lista ordenada e Lista Ordenadas misturadas com listas não ordenadas.Como no exemplo a seguir: </p>
+<ol style="color: rgb(242, 66, 96);">
+    <li>Primeiro item</li>
+    <ol type="A">
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ol>
+    <li>Segundo item</li>
+    <ul>
+        <li>1</li>
+        <li>7</li>
+        <li>5</li>
+    </ul>
+    <li>Terceiro item</li>
+    <li>Quarto item</li>
+    <li>Quinto item</li>
+</ol>
+<!--Aula 10 - Links e Âncoras em HTLM5-->
+<h2>Usando links externos</h2>
+<p>Para colocar um link externo no site, Usa-se a tag &lt;a&gt; e o href"" = Nome a ser clicado.target="_blank" para abrir uma nova janela e não fechar a so site atual e rel = "external" para sinalizar que é um site externo. Vou colocar como exemplo um link para receita de um bolo de mandioca. <br>
+Clique para acessar a 
+<a href="https://www.receitasnestle.com.br/receitas/receita-" rel="external" target="_blank">receita de bolo de mandioca.</a></p>
+<h2>Usando links internos</h2>
+<p>Aqui esta um exemplo de <a href="index1.html" rel="next" >link interno</a> no site.</p> 
+
+<p>Neste caso, se não quiser abrir uma nova janela, no lugar de href"" = Nome a ser clicado.target="_blank" - Usa-se: href="link" rel="next" >link interno - Para ir para uma próxima página e para voltar é so clicar para voltar á página anterior. </p>
+ <h2>Criando link para baixar um pdf</h2>
+    <li><a href="livro/guia_estudo_python.docx.pdf">Ler o livro em PDF</a></li>
+    <li><a href="livro/meulivro.zip.zip">Ler compactado em Zip</a> </li>
+    <li><a href="livro/guia_estudo_python.docx.pdf" download="guia_estudo_python.docx.pdf" type="application/pdf">Download do livro</a></li>
+<h2>Desafios</h2>
+<h3>Apresentação</h3>
+<p>Clique <a href="indexapresentacao.html" rel="next">aqui</a> para seguir para a minha apresentação.</p>
+<h2>Imagens Dinâmicas</h2>
+<p>Tente abrir esse site em vários dispositivos ou aumente e diminua o tamanho do seu navegador.</p>
+<p>Com as tags <strong>picture</strong> e <strong>source</strong> pode colocar a imagens com tamanhos diferentes para elas se adaptarem ao tamanho do navegador.</p>
+<picture>
+    <source media="(max-width: 750px)" srcset="imagens/p.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imagens/m.png" type="image/png">
+    <img src="imagens/g.png" alt="imagem flexível">
+</picture>
+<h2>Adcionando áudio no site</h2>
+<p>Pode baixar áudio da biblioteca do Youtube Creator, desde que confira antes os direitos autorais. A tag utilizada é audio e parâmetros controls e autoplay. Os formatos existentes são MP3, WAV E OGG, portanto depende muito do navegador. </p>
+
+<audio src="audio/Nebula - The Grey Room _ Density & Time.mp3" controls autoplay></audio>
+<p>Outra maneira é usando source com os formatos de áudio igual a imagem.</p>
+<h2>Adcionando vídeo no site</h2>
+<p>Os formatos de vídeo nativamente aceitos no HTML5 são MP4 (.mp4), WebM (.webm) e Ogg (.ogv). O MP4 com codec H.264 é o mais compatível entre navegadores e dispositivos móveis, enquanto o WebM oferece alta qualidade com menor tamanho de arquivo. Recomenda-se fornecer múltiplas fontes para garantir compatibilidade. As tags necessarias são: <br>
+    video controls
+    source src="video.webm" type="video/webm"
+    source src="video.mp4" type="video/mp4"
+    Seu navegador não suporta vídeos em HTML5.
+/video <br>
+DICA PARA CONVERSOR DE VÍDEO: HandBrake
+Consumo é alto quando são hospedados no site.
+</p>
+<video width="560" controls src="audio/bordado.mp4"></video>
+<h2>Adcionando vídeos de plataforma externa</h2>
+<p>Consome menos espaço no site, quando extraídos de plataformas como o Youtube.  A forma mais simples (e correta) de colocar um vídeo do YouTube no seu site é usando o iframe> — não use video> com link do YouTube, porque não funciona (o YouTube não fornece o arquivo direto, só o player). <br>
+Método padrão (incorporar vídeo)
+1. Vá no vídeo no YouTube
+2. Clique em “Compartilhar” → “Incorporar”
+3. Copie o código</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6iw6GmoX3Lc?si=g4FX_9UE1u2lUeEX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1tjuhCdWPB4?si=vDSXZGG59SmWllVn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>OBSERVAÇÃO: O player do YouTube não funciona corretamente em arquivos locais (file://) por questões de segurança (CORS / origem).
+
+Ele precisa de um servidor (http:// ou https://) para rodar.
+
+✅ Como resolver (bem simples)
+✔️ Opção 1 — usar Live Server (mais fácil)
+
+No VS Code:
+
+Clique com botão direito no index.html
+Clique em "Open with Live Server"
+
+Vai abrir algo assim:
+
+http://127.0.0.1:5500/index.html
+
+✔️ Pronto — o vídeo vai funcionar</p>
+
+</body>
+</html>
+
