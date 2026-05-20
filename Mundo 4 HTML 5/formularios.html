@@ -102,5 +102,66 @@ id="icor">
 </form>
 </fieldset>
 
+<h1>Select Datalist e Textarea</h1>
+<fieldset>
+    <p><label for="iest">Estado: </label>
+    <select name="est" id="iest">
+        <optgroup label="Sudeste">
+        <option value="MG">Minas Gerais</option>
+        <option value="SP">São Paulo</option>
+        <option value="ES">Espirito Santo</option>
+        <option value="RJ">Rio de Janeiro</option>
+    </optgroup>
+    <optgroup label="Nordeste">
+        <option value="MA">Maranhão</option>
+        <option value="BA">Bahia</option>
+        <option value="PE"> Pernambuco</option>
+        <option value="PB">Paraíba</option>
+    </optgroup>
+    </select></p>
+<p>
+<label for="icid">Cidade: </label>
+<input type="text" name="cid" id="icid" list="liscid">
+<datalist id="liscid">
+    <option value="SL">São Luis</option>
+    <option value="SV">Salvador</option>
+    <option value="RF">Recife</option>
+    <option value="JP">João Pessoa</option>
+    <option value="S">São Paulo</option>
+    <option value="R">Rio de Janeiro</option>
+    <option value="VT">Vitória</option>
+    <option value="BH">Belo Horizonte</option>
+</datalist>
+</p>
+
+
+<p><label for="icom">Comentário: </label>
+<textarea name="com" id="icom" cols="50" rows="6"></textarea>
+</p> 
+<p><input type="submit" value="Enviar">
+<input type="reset" value="Limpar"></p>
+</fieldset>
+<h1>Output</h1>
+<fieldset><legend>Output</legend>
+<form action="cadastro.php" method="get" autocomplete="on">
+<p>
+    <label for="in1">Número 1: </label>
+    <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value)+Number(in2.value)">
+</p>
+
+<p>
+    <label for="in2">Número 2: </label>
+    <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML= Number(in1.value)+Number(in2.value)">
+</p>
+<p>
+<label for="isoma">Soma: </label>
+<output name="soma" id="isoma">0</output></p>
+
+<p><input type="submit" value="Enviar">
+<input type="reset" value="Limpar"></p>
+
+</form>
+</fieldset>
+
 </body>
 </html>
