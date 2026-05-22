@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(159, 159, 244);
+}
+
+article::after{
+    content: "retrato";
+}

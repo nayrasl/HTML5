@@ -157,10 +157,30 @@ id="icor">
 <label for="isoma">Soma: </label>
 <output name="soma" id="isoma">0</output></p>
 
+<p>
+    <input type="range" name="vol"
+    id="ivol" min="0" max="100" value="50" oninput="ival.innerHTML = Number(ivol.value)">
+    <output id="ival">50</output>
+</p>
+<p>Obs: Id do input é um e o Id do Output e oninput é outro.</p>
 <p><input type="submit" value="Enviar">
 <input type="reset" value="Limpar"></p>
 
+<fieldset><legend>Cálculo de idade</legend>
+    <p>
+        <label for="iano">Em que ano você nasceu? </label>
+        <input type="number" name="ano" id="iano" min="1900" max="2026"
+        oninput="calIdade()">
+        <label for="iidade">Sua idade é: </label>
+        <output id="iidade">0</output>
+    </p>
+</fieldset>
 </form>
+<script> 
+    function calIdade(){let atual = new Date().getFullYear() 
+        iidade.innerHTML = Number(atual)-Number(iano.value)
+    }
+</script>
 </fieldset>
 
 </body>
