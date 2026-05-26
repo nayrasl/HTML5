@@ -7,9 +7,11 @@
     menu{
         display: block;
     }
-    
+    ul{
+        display: flex;
+    }
     menu li {
-        display: inline-block;
+        flex: auto;
         width: 260px;
     }
 
