@@ -1,46 +1,255 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudos</title>
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos de Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
 
-        body{
-            background-color: lightcoral;
-        }
+    body {
+      padding: 2rem;
+      background: #f5f5f5;
+    }
 
-        main{
-            background-color: aqua;
-            height: 50vh;
-            width: 100vw;
+    h2 {
+      margin-top: 2rem;
+      color: #333;
+    }
 
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 500px;
+      height: 200px;
+      background: #beb7b767;
+      border-radius: 8px;
+      gap: 10px;
+      padding: 10px;
+      margin-bottom: 1rem;
+    }
 
-        }
+    .item {
+      width: 80px;
+      height: 50px;
+      background: #949c9c;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #222;
+      font-weight: bold;
+    }
+    .conteiner filho
 
-        section{
-            background-color: burlywood;
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+    /* ========================================
+       1. JUSTIFY-CONTENT
+       Alinha itens no EIXO PRINCIPAL (horizontal por padrão)
+    ======================================== */
+    .justify-start   { justify-content: flex-start; }
+    .justify-center  { justify-content: center; }
+    .justify-end     { justify-content: flex-end; }
+    .justify-between { justify-content: space-between; }
+    .justify-around  { justify-content: space-around; }
+    .justify-evenly  { justify-content: space-evenly; }
 
+    /* ========================================
+       2. ALIGN-ITEMS
+       Alinha itens no EIXO CRUZADO (vertical por padrão)
+       Afeta cada LINHA individualmente
+    ======================================== */
+    .align-start   { align-items: flex-start; }
+    .align-center  { align-items: center; }
+    .align-end     { align-items: flex-end; }
+    .align-stretch { align-items: stretch; }
+
+    /* Para stretch funcionar, os itens não podem ter altura fixa */
+    .align-stretch .item { height: auto; min-height: 30px; }
+
+    /* ========================================
+       3. ALIGN-CONTENT
+       Distribui as LINHAS no eixo cruzado
+       Só funciona com flex-wrap e múltiplas linhas
+    ======================================== */
+    .content-start   { align-content: flex-start; }
+    .content-center  { align-content: center; }
+    .content-end     { align-content: flex-end; }
+    .content-between { align-content: space-between; }
+    .content-around  { align-content: space-around; }
+
+    /* Container com mais itens para demonstrar align-content */
+    .multi-line .item {
+      width: 60px;
+      height: 40px;
+    }
+
+    code {
+      background: #e0e0e0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    p {
+      color: #555;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .filho{
+        text-align: center;
+    }
+    #f1{
+        align-self: auto;
+    }
+    #f2{
+        align-self: flex-start;
+    }
+    #f3{
+        align-self: flex-end;
+    }
+    #f4{
+        align-self: center;
+    }
+    #f5{
+        align-self: stretch;
+        height: auto;
+    }
+
+    
+  </style>
 </head>
 <body>
-    <main>
-        <section>
-            <h1>Tela de Login</h1>
-        </section>
-    </main>
-    
+
+  <h1>Flexbox: As 3 Propriedades de Alinhamento</h1>
+
+  <!-- JUSTIFY-CONTENT -->
+  <h2>1. <code>justify-content</code></h2>
+  <p>Alinha os itens ao longo do <strong>eixo principal</strong> (horizontal em row).</p>
+
+  <h3><code>justify-content: flex-start</code></h3>
+  <div class="container justify-start">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3><code>justify-content: center</code></h3>
+  <div class="container justify-center">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3><code>justify-content: space-between</code></h3>
+  <div class="container justify-between">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3><code>justify-content: space-evenly</code></h3>
+  <div class="container justify-evenly">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <!-- ALIGN-ITEMS -->
+  <h2>2. <code>align-items</code></h2>
+  <p>Alinha os itens ao longo do <strong>eixo cruzado</strong> (vertical em row). Afeta cada linha individualmente.</p>
+
+  <h3><code>align-items: flex-start</code></h3>
+  <div class="container align-start">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3><code>align-items: center</code></h3>
+  <div class="container align-center">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3><code>align-items: flex-end</code></h3>
+  <div class="container align-end">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3><code>align-items: stretch</code></h3>
+  <div class="container align-stretch">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <!-- ALIGN-CONTENT -->
+  <h2>3. <code>align-content</code></h2>
+  <p>Distribui as <strong>linhas</strong> no eixo cruzado. Requer <code>flex-wrap: wrap</code> e múltiplas linhas.</p>
+
+  <h3><code>align-content: flex-start</code></h3>
+  <div class="container multi-line content-start">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+
+  <h3><code>align-content: center</code></h3>
+  <div class="container multi-line content-center">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+
+  <h3><code>align-content: space-between</code></h3>
+  <div class="container multi-line content-between">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+
+  <h3><code>align-content: space-around</code></h3>
+  <div class="container multi-line content-around">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+
+  <h1>Operando nos Filhos</h1>
+  <h2>Align-Self</h2>
+  <div class="container filho">
+    <div class="item" id="f1">AUTO</div>
+    <div class="item" id="f2">FLEX-START</div>
+    <div class="item" id="f3">FLEX-END</div>
+    <div class="item" id="f4">CENTER</div>
+    <div class="item" id="f5">STRETCH</div>
+</div>
 </body>
-</html>
+</html> 
