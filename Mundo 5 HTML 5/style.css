@@ -50,40 +50,33 @@ main{
     background-color: white;
     width: 90vw;
     margin: auto;
-    padding: 20px;
     border-radius: 5px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.525);
-
-    display: flex;
-    flex-flow: row wrap-reverse;
-    justify-content: space-around;
+    text-align: justify;
+}
+.normal{
+    background-color: lightgray;
+    padding: 10px;
+    margin: auto;
 }
 
-.p1{
-    width: 600px;
-    order:3;
-     
-    
-}
-.imagem{
-     order:4;
+section.flex-content{
+   padding: 20px;
+   display: flex;
+   flex-flow: column nowrap;
    
 }
-.p2{
-    width: 600px;
-     order:2;
-}
-.video{
-     order:1;
+.media-text{
+    display: flex;
+    flex-flow: row wrap-reverse;
 
 }
 
-
-
-
-h2{
-    margin-bottom: 10px;
+.text-media{
+    display: flex;
+    flex-flow: row wrap;
 }
+
 
 
 @media screen and (max-width: 600px) {
@@ -100,3 +93,4 @@ h2{
  }
 
 }
+
